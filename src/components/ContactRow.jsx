@@ -1,6 +1,8 @@
-import {useState} from 'react'
-
-function ContactRow ({ contact }) {
+function ContactRow ({setSelectedContactId, contact }) {
+  const handleContactClick = () => {
+    // set the selectedcontactId when a contact row is clicked 
+    setSelectedContactId(contact.id)
+  }
     return (
       <tr onClick={() => {
         setSelectedContactId(contact.id);
